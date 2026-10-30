@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mayur Jadhav · E-Waste Management Academic Dashboard</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Deep Forest Glows -->
+  <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow glow-top-right" aria-hidden="true"></div>
+  <div class="ambient-glow glow-center" aria-hidden="true"></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <img src="assets/images/circuit-leaf.svg" alt="EcoTech Circuit Logo" class="brand-logo" width="36" height="36">
+        <div class="brand-text">
+          <span class="brand-title">Vidyalankar Institute of Technology</span>
+          <span class="brand-sub">Department of Computer Engineering · Autonomous</span>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <div class="portal-badge">
+          <span class="pulse-dot"></span>
+          <span>Semester V · Academic Portal</span>
+        </div>
+        <button id="navGoTopBtn" class="top-action-btn" title="Go to top of page">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+          <span>Go to top</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="dashboard-container">
+    <!-- Student Profile & Subject Banner -->
+    <section class="profile-hero">
+      <div class="hero-content">
+        <div class="greeting-tag">
+          <span class="greeting-indicator"></span>
+          <span class="greeting-text">Welcome back, Mayur.</span>
+        </div>
+        <h1 class="hero-title">
+          E-Waste Management
+          <span class="course-code">EWEM · HSSM-VEC</span>
+        </h1>
+        <p class="hero-description">
+          Personal academic submission repository &amp; evaluation dossier documenting all continuous assessment tasks, state trackers, green building evaluations, and case studies.
+        </p>
+
+        <!-- Student Meta Chips -->
+        <div class="student-meta-grid">
+          <div class="meta-card">
+            <span class="meta-label">Student Name</span>
+            <span class="meta-value">Mayur Jadhav</span>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label">Roll Number</span>
+            <span class="meta-value font-mono">24102B0029</span>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label">Class &amp; Division</span>
+            <span class="meta-value">TE CMPN B</span>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label">Subject</span>
+            <span class="meta-value">E-Waste Management</span>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label">Academic Year</span>
+            <span class="meta-value font-mono">2026–27</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Eco-Tech Graphic Card -->
+      <div class="hero-badge-card">
+        <div class="circuit-chip-visual">
+          <div class="chip-outer-ring">
+            <div class="chip-inner-core">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                <circle cx="12" cy="12" r="4"></circle>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="chip-info">
+          <span class="chip-status-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            100% Submissions Handed In
+          </span>
+          <span class="chip-credits">2 Credits Course · 75 Marks ISA</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section" aria-label="Submission Statistics">
+      <div class="stat-card" data-stat-target="All">
+        <div class="stat-icon-wrap icon-all">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <div class="stat-data">
+          <span class="stat-number" id="statTotalAssignments">0</span>
+          <span class="stat-label">Total Submissions</span>
+          <span class="stat-hint">Across All Categories</span>
+        </div>
+      </div>
+
+      <div class="stat-card" data-stat-target="ISA">
+        <div class="stat-icon-wrap icon-isa">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 11 12 14 22 4"></polyline>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+          </svg>
+        </div>
+        <div class="stat-data">
+          <span class="stat-number" id="statTotalISA">0</span>
+          <span class="stat-label">Total ISA Submissions</span>
+          <span class="stat-hint">In-Semester Continuous Assessment</span>
+        </div>
+      </div>
+
+      <div class="stat-card" data-stat-target="ESE">
+        <div class="stat-icon-wrap icon-ese">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+        </div>
+        <div class="stat-data">
+          <span class="stat-number" id="statTotalESE">0</span>
+          <span class="stat-label">Total ESE Submissions</span>
+          <span class="stat-hint">Term-End &amp; Exam Evaluations</span>
+        </div>
+      </div>
+
+      <div class="stat-card" data-stat-target="Extras">
+        <div class="stat-icon-wrap icon-extras">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <div class="stat-data">
+          <span class="stat-number" id="statTotalExtras">0</span>
+          <span class="stat-label">Additional Materials</span>
+          <span class="stat-hint">Technical Reports &amp; Directories</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls Bar: Category Navigation & Search -->
+    <section class="controls-section" aria-label="Dashboard Controls">
+      <!-- Reference-Style Horizontal Pill Category Navigation -->
+      <div class="category-pills-wrapper">
+        <div class="category-pills-nav" role="tablist" aria-label="Category Filter">
+          <button class="pill-btn active" role="tab" aria-selected="true" data-category="All">
+            <span class="pill-title">All</span>
+            <span class="pill-counter" id="pillCountAll">0</span>
+          </button>
+          <button class="pill-btn" role="tab" aria-selected="false" data-category="ISA">
+            <span class="pill-title">ISA</span>
+            <span class="pill-counter" id="pillCountISA">0</span>
+          </button>
+          <button class="pill-btn" role="tab" aria-selected="false" data-category="ESE">
+            <span class="pill-title">ESE</span>
+            <span class="pill-counter" id="pillCountESE">0</span>
+          </button>
+          <button class="pill-btn" role="tab" aria-selected="false" data-category="Extras">
+            <span class="pill-title">Extras</span>
+            <span class="pill-counter" id="pillCountExtras">0</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Search & Sorting Toolbar -->
+      <div class="search-toolbar">
+        <div class="search-box">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search assignments by name, keyword, or file type..." autocomplete="off" spellcheck="false">
+          <button id="clearSearchBtn" class="clear-btn" title="Clear search" aria-label="Clear search" hidden>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <span class="search-kbd-hint" title="Press forward-slash to focus search">/</span>
+        </div>
+
+        <div class="sort-selector-wrapper">
+          <label for="sortOrderSelect" class="sr-only">Sort Submissions</label>
+          <select id="sortOrderSelect" class="sort-select">
+            <option value="timeline-asc">Date: Chronological (Jul → Oct)</option>
+            <option value="timeline-desc">Date: Latest First (Oct → Jul)</option>
+            <option value="name-asc">Name: A to Z</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Submissions Status & Counter Header -->
+    <div class="results-header">
+      <div class="results-count">
+        <span id="resultsCountText">Showing all submissions</span>
+      </div>
+      <div class="portal-sync-status">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span>All 16 original files verified in <code>/data</code></span>
+      </div>
+    </div>
+
+    <!-- Assignment Cards Grid -->
+    <section class="cards-grid" id="cardsGrid" aria-label="Assignments Inventory">
+      <!-- Dynamic Assignment Cards inserted here via script.js -->
+    </section>
+
+    <!-- Empty State for Search / Filters -->
+    <div class="empty-state" id="emptyState" hidden>
+      <div class="empty-icon-box">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+      <h3 class="empty-title">No submissions match your query</h3>
+      <p class="empty-desc">We couldn't find any assignment matching your filter or keyword. Try resetting your search or selecting the "All" category tab.</p>
+      <button id="resetFilterBtn" class="primary-btn">Reset All Filters</button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="dashboard-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">Mayur Jadhav · Roll No. 24102B0029</span>
+        <span class="footer-dot">·</span>
+        <span class="footer-subject">TE CMPN B · E-Waste Management (2026–27)</span>
+      </div>
+      <div class="footer-right">
+        <span class="footer-meta">Vidyalankar Institute of Technology, Mumbai</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Document Preview Modal -->
+  <div class="modal-overlay" id="previewModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-container">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="modal-badges-row">
+            <span class="modal-num-badge" id="modalAssignmentNum">Assignment</span>
+            <span class="modal-category-badge" id="modalCategoryBadge">ISA</span>
+            <span class="modal-format-badge" id="modalFormatBadge">PDF</span>
+            <span class="modal-status-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Handed in
+            </span>
+          </div>
+          <h2 class="modal-title" id="modalTitle">Assignment Title</h2>
+          <div class="modal-meta-row">
+            <span class="modal-meta-item" id="modalDateMeta">Submitted on --</span>
+            <span class="modal-meta-sep">·</span>
+            <span class="modal-meta-item" id="modalSizeMeta">0 KB</span>
+            <span class="modal-meta-sep">·</span>
+            <span class="modal-meta-item font-mono" id="modalFileMeta">filename.ext</span>
+          </div>
+        </div>
+
+        <div class="modal-actions-group">
+          <a id="modalNewTabBtn" href="#" target="_blank" rel="noopener noreferrer" class="modal-btn secondary" title="Open file in separate tab">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            <span>Open in Tab</span>
+          </a>
+          <a id="modalDownloadBtn" href="#" download class="modal-btn primary" title="Download original file">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download</span>
+          </a>
+          <button id="modalCloseBtn" class="modal-close-btn" aria-label="Close modal window" title="Close (Esc)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body (Dynamic Preview Host) -->
+      <div class="modal-body" id="modalBody">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+
+      <!-- Modal Footer (Navigation & Shortcut Hint) -->
+      <div class="modal-footer">
+        <div class="modal-nav-buttons">
+          <button id="modalPrevBtn" class="modal-nav-btn" title="Previous Submission (Left Arrow)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            <span>Previous</span>
+          </button>
+          <span class="modal-pagination" id="modalPaginationText">1 of 16</span>
+          <button id="modalNextBtn" class="modal-nav-btn" title="Next Submission (Right Arrow)">
+            <span>Next</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-shortcut-hint">
+          <span>Use <kbd>←</kbd> <kbd>→</kbd> to navigate · <kbd>Esc</kbd> to close</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Go to Top Button -->
+  <button id="floatingGoTopBtn" class="floating-top-btn" aria-label="Scroll back to top" title="Go to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+    <span>Go to top</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
